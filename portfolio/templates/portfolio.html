@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<section class="site-section" id="portfolio-section">
+    
+
+    <div class="container">
+
+      <div class="row mb-3">
+        <div class="col-12 text-center" data-aos="fade">
+          <h2 class="section-title mb-3" style="margin-top: 25px;">Portfolio</h2>
+        </div>
+      </div>
+
+      <div class="row justify-content-center mb-5" data-aos="fade-up">
+        <div id="filters" class="filters text-center button-group col-md-7">
+          <button class="btn btn-primary active" data-filter="*">All</button>
+          <button class="btn btn-primary" data-filter=".web">Web</button>
+          <button class="btn btn-primary" data-filter=".design">Android Apps</button>
+          <button class="btn btn-primary" data-filter=".brand">AI</button>
+          <button class="btn btn-primary" data-filter=".brand">Net Security</button>
+
+        </div>
+      </div>  
+      
+      <div id="posts" class="row no-gutter" data-aos="fade-up" data-aos-delay="100">
+        <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+          <a href="{% static 'images/web1.jpeg' %}" class="item-wrap fancybox" data-fancybox="gallery2">
+            <span class="icon-search2"></span>
+            <img class="img-fluid" src="{% static 'images/web1.jpeg' %}">
+          </a>
+        </div>
+        <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <a href="{% static 'images/web2.jpeg' %}" class="item-wrap fancybox" data-fancybox="gallery2">
+            <span class="icon-search2"></span>
+            <img class="img-fluid" src="{% static 'images/web2.jpeg' %}">
+          </a>
+        </div>
+
+        <div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <a href="{% static 'images/data1.jpeg' %}" class="item-wrap fancybox" data-fancybox="gallery2">
+            <span class="icon-search2"></span>
+            <img class="img-fluid" src="{% static 'images/data1.jpeg' %}">
+          </a>
+        </div>
+
+        <div class="item design col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+
+          <a href="{% static 'images/android.png' %}" class="item-wrap fancybox" data-fancybox="gallery2">
+            <span class="icon-search2"></span>
+            <img class="img-fluid" src="{% static 'images/android.png' %}">
+          </a>
+
+        </div>
+
+
+        <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <a href="{% static 'images/AI2.jfif' %}" class="item-wrap fancybox" data-fancybox="gallery2">
+            <span class="icon-search2"></span>
+            <img class="img-fluid" src="{% static 'images/images (7).jpeg' %}">
+          </a>
+        </div>
+
+        <div class="item design col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <a href="{% static 'images/hack2.jpeg' %}" class="item-wrap fancybox" data-fancybox="gallery2">
+            <span class="icon-search2"></span>
+            <img class="img-fluid" src="{% static 'images/hack2.jpeg' %}">
+          </a>
+        </div>
+
+        <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <a href="{% static 'images/hack4.jpeg' %}" class="item-wrap fancybox" data-fancybox="gallery2">
+            <span class="icon-search2"></span>
+            <img class="img-fluid" src="{% static 'images/hack4.jpeg' %}">
+          </a>
+        </div>
+
+        <div class="item design col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <a href="{% static 'images/images (20).jpeg' %}" class="item-wrap fancybox" data-fancybox="gallery2">
+            <span class="icon-search2"></span>
+            <img class="img-fluid" src="{% static 'images/images (20).jpeg' %}">
+          </a>
+        </div>
+
+        <div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <a href="{% static 'images/images (18).jpeg' %}" class="item-wrap fancybox" data-fancybox="gallery2">
+            <span class="icon-search2"></span>
+            <img class="img-fluid" src="{% static 'images/images (18).jpeg' %}">
+          </a>
+        </div>
+
+        <div class="item design col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <a href="{% static 'images/images (19).jpeg' %}" class="item-wrap fancybox" data-fancybox="gallery2">
+            <span class="icon-search2"></span>
+            <img class="img-fluid" src="{% static 'images/images (19).jpeg' %}">
+          </a>
+        </div>
+
+  </section>
+{% endblock %}

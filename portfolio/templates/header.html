@@ -1,0 +1,98 @@
+{% load staticfiles %}
+
+<nav class="navbar navbar-expand-md fixed-top" style="background-color: blueviolet;" >
+  <a class="navbar-brand" href="{% url 'index' %}" style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 30px; color: cornsilk;">Computer World</a>
+  <div class="navbar-toggler" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="icon-menu" style="color: cornsilk;" >Menu</span>
+  </div>
+
+  <div class="collapse navbar-collapse" style="color: cornsilk;" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'index' %}" style="color: cornsilk;">Shoppings<span class="sr-only">(current)</span></a>
+  
+      </li>
+     
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'courses' %}" style="color: cornsilk;">Courses<span class="sr-only">(current)</span></a>
+
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'testimonial' %}" style="color: cornsilk;">Testimonials<span class="sr-only">(current)</span></a>
+  
+      </li>
+     
+  
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'services' %}" style="color: cornsilk;">Our Services<span class="sr-only">(current)</span></a>
+  
+     
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'aboutus' %}" style="color: cornsilk;">About Us<span class="sr-only">(current)</span></a>
+  
+      </li>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="{% url 'contacts' %}" style="color: cornsilk;">Contact Us<span class="sr-only">(current)</span></a>
+
+    </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'FAQs' %}" style="color: cornsilk;">FAQs<span class="sr-only">(current)</span></a>
+  
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="https://api.whatsapp.com/send?phone=254705660783" style="color: cornsilk;">Help?<span class="sr-only">(current)</span></a>
+  
+      </li>
+
+    </li>
+    {% if user.is_authenticated %}
+    <li>{{user.first_name}}</li>
+    <li class="nav-item active">
+      <a class="nav-link" href="logout" style="color: cornsilk;">Logout<span class="sr-only">(current)</span></a>
+
+    </li>
+    {% else %}
+    <li class="nav-item active">
+      <a class="nav-link" href="register" style="color: cornsilk;">Register<span class="sr-only">(current)</span></a>
+
+    </li>
+    {% endif %}
+
+
+    
+<!-- Start of Async Callbell Code -->
+<script>
+  window.callbellSettings = {
+    token: "QU8ZtCKNmz9Jq1QqBZs31YNb"
+  };
+</script>
+<script>
+  (function(){var w=window;var ic=w.callbell;if(typeof ic==="function"){ic('reattach_activator');ic('update',callbellSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Callbell=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://dash.callbell.eu/include/'+window.callbellSettings.token+'.js';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+</script>
+<!-- End of Async Callbell Code -->
+
+          
+      <div style="padding-left:250px;">
+      <p class="col"></p>
+          <l1>
+            <p>Lets Connect On:
+            <a href="https://www.facebook.com/computerworld.lorey.5" style="color: cornsilk;"><i aria-hidden="true" class="fa fa-facebook-square"></i></a>
+            <a href="" style="color: cornsilk;"><i aria-hidden="true" class="fa fa-twitter-square"></i></a>
+            <a href="" style="color: cornsilk;"><i aria-hidden="true" class="fa fa-linkedin-square"></i></a>
+            <a href="" style="color: cornsilk;"><i aria-hidden="true" class="fa fa-google-plus-square"></i></a>
+            <a href="" style="color: cornsilk;"><i aria-hidden="true" class="fa fa-instagram"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=254705660783" style="color: cornsilk;"><i aria-hidden="true" class="fa fa-whatsapp"></i></a>
+          </p>
+          </l1> 
+    </ul>
+  </div>
+    </div>
+  </div>
+</nav>
+
+
+

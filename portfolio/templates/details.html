@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="site-section cta-big-image" id="about-section">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12 text-center" data-aos="fade">
+        <h2 class="section-title mb-3" style="margin-top: 25px;">{{Detail.Title}}</h2>
+      </div>
+    </div>
+
+    <section class="site-section border-bottom" id="team-section">
+      <div class="border-top pt-5">
+      <div class="container">
+      
+        <div class="row">
+          <div class="col-md-2 grid_listing" data-aos="fade-up" data-aos-delay="300">
+            <div class="product-listing-m gray-bg">
+              <h5 class="card-ti  tlr">{{Detail.Title}}</h5>
+              {% if Detail.Image %}
+              <div class="product-listing-img"> <a href=""><img src="{{Detail.Image}}" class="img-responsive" alt="image" class="img-fluid"/> </a>
+              </div>
+              {% endif %}
+              <div class="product-listing-content">
+                <h5><a href=""></a></h5>
+                <div class="card-body">
+                <p class="card-text">{{Detail.Description}}</p>
+                <p class="list-price">KSH.{{Detail.Price}}</p>
+                <ul class="features_list">
+                </ul>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>  
+</div>
+
+
+{% endblock %}

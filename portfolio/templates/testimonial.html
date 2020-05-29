@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<section class="site-section bg-light" id="pricing-section">
+  <div class="container">
+  
+<div class="row site-section" id="faq-section">
+  <div class="col-12 text-center" data-aos="fade">
+    <h2 class="section-title" style="margin-top: 30px;">Testimonials</h2>
+  </div>
+</div>
+      <section class="site-section" id="team-section">
+        <div class="">
+        <div class="container">
+          <div class="row">
+            {% for t in testimonials %}
+            <div class="col-md-6 grid_listing" data-aos="fade-up" data-aos-delay="300">
+              <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-black h4 mb-4">{{t.Name}}</h3>
+                <p>{{t.Testimonial}}</p>
+                <p>{{t.Date}}</p>
+                </div>
+            </div>
+            {% endfor %}
+
+          </div>
+        </div>
+      </section>     
+    </div>  
+  </div>
+</div>
+<div class="container">
+<div class="row site-section" id="faq-section">
+  <div class="col-8 text-center" data-aos="fade">
+    <button class="open-button" onclick="openForm()">Upload Testimonial</button>
+    <div class="form-popup" id="myForm" style="border-radius: 25px;">
+          <form method="POST" enctype="multipart/form-data" class="form-container">
+            {% csrf_token %}
+            {{form|crispy}}     
+        <button type="submit" class="btn">Upload</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+  </div>
+  </div>
+</div> 
+</div>
+</section>
+
+{% endblock %}
+
+<style>
+.search{
+  border: none;
+  border-bottom: 2px solid red; 
+}
+</style> 

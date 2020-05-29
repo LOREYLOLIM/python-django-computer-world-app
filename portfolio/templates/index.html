@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="site-section cta-big-image" id="about-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center" data-aos="fade">
+          <h2 class="section-title mb-3" style="margin-top: 25px;">Shoppings</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center mb-5" data-aos="fade-up">
+        <div id="filters" class="filters text-center button-group col-md-7">
+          <button class="btn btn-success active" data-filter="*">All</button>
+          <button class="btn btn-success" data-filter=".computers">Computers</button>
+          <button class="btn btn-success" data-filter=".phones">Smart Phones</button>
+          <button class="btn btn-success" data-filter=".cameras">CCTV</button>
+        </div>
+      </div>  
+      
+      <section class="site-section border-bottom" id="team-section">
+        <div class="border-top pt-5">
+        <div class="container">
+        
+          <div class="row">
+            {% for s in shop %}
+            <div class="item {{s.Brand}}col-md-2 grid_listing" data-aos="fade-up" data-aos-delay="300">
+              <div class="product-listing-m gray-bg">
+                <h5 class="card-ti tlr">{{s.Title}}</h5>
+                {% if s.Image %}
+                <div class="product-listing-img"> <a href=""><img src="{{s.Image.url}}" class="img-responsive" alt="image" class="img-fluid"/> </a>
+                </div>
+                {% endif %}
+                <div class="product-listing-content">
+                  <h5><a href=""></a></h5>
+                  <div class="card-body">
+                  <p class="card-text">{{s.Description}}</p>
+                  <p class="list-price">KSH.{{s.Price}}</p>
+                  <a href="{% url 'details' pk=s.pk %}" class="btn btn-warning">Details</a>
+                  <a href="https://api.whatsapp.com/send?phone=254705660783" class="btn btn-success">Order</a>
+                  <ul class="features_list">
+                  </ul>
+                </div>
+              </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+    </div>  
+  </div>
+
+<!--   <html>
+    <head>
+        <title> Email Newsletter </title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <div class="col-12">
+                <h1>Email Newsletter</h1>
+            </div>
+            <div class="col-12">
+                {% if email %}
+                <p>{{ email }} has been {{ action }}.</p>
+                {% endif %}
+            </div>
+        {% if form %}
+            <div class="col-12 col-md-4">
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    {{ form }}
+                    <br>
+                    <button type="submit" class="btn btn-success">Subscribe!</button>
+                </form>
+            </div>
+        {% endif %}
+        </div>
+    </body>
+</html>-->
+
+
+  {% endblock content %}
