@@ -137,6 +137,10 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR,"static")
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
+STATICFILES_DIR = (
+    os.path.join(BASE_DIR, "static"),
+)
+
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 EMAIL_USE_TLS = True
