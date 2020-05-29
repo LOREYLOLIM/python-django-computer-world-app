@@ -1,0 +1,1 @@
+web: gunicorn computerworld.wsgi --log-file -
