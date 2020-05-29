@@ -93,7 +93,6 @@ DATABASES = {
 
 DEBUG_PROPAGATE_EXCEPTIONS = True
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Password validation
